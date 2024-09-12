@@ -108,6 +108,8 @@ var path = $@"C:\Output\{projectName}\Data";
 Console.WriteLine(path);
 */
 
+
+/*
 //Desafío: aplicación de formato y visualización de las instrucciones
 
 string projectName = "ACME";
@@ -115,9 +117,10 @@ string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\
 
 Console.WriteLine($"View English output:\n\tc:\\Exercise\\{projectName}\\data.txt");
 Console.WriteLine($"{russianMessage}\n\tc:\\Exercise\\{projectName}\\ru-RU\\data.txt");
+*/
 
 /*
-//SOLUCION
+//SOLUCION 
 string projectName = "ACME";
 string englishLocation = $@"c:\Exercise\{projectName}\data.txt";
 Console.WriteLine($"View English output:\n\t\t{englishLocation}\n");
@@ -126,3 +129,95 @@ string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\
 string russianLocation = $@"c:\Exercise\{projectName}\ru-RU\data.txt";
 Console.WriteLine($"{russianMessage}:\n\t\t{russianLocation}\n");
 */
+
+
+/*
+int firstNumber = 12;
+int secondNumber = 7;
+Console.WriteLine(firstNumber + secondNumber);
+*/
+
+
+/*
+string firstName = "Bob";
+int widgetsSold = 7;
+Console.WriteLine(firstName + " sold " + widgetsSold + " widgets.");
+Console.WriteLine(firstName + " sold " + widgetsSold + 7 + " widgets.");
+Console.WriteLine(firstName + " sold " + (widgetsSold + 7) + " widgets.");
+*/
+
+
+/*
+int numero1 = 100;
+int numero2 = 15;
+double num1 = 1532.27;
+double num2 = 72.69;
+
+Console.Clear();
+Console.WriteLine(numero1 + " + " + numero2 + " = " + (numero1 + numero2));
+Console.WriteLine(numero1 + " - " + numero2 + " = " + (numero1 - numero2));
+Console.WriteLine(numero1 + " + " + numero2 + " = " + (numero1 * numero2));
+Console.WriteLine(numero1 + " / " + numero2 + " = " + (numero1 / numero2) + " y resto = " + (numero1 % numero2));
+Console.WriteLine(numero1 + " / " + numero2 + " = " + ((decimal)numero1 / numero2) + " division no entera");
+Console.WriteLine(num1 + " / " + num2 + " = " + (num1 / num2) + " y resto = " + (num1 % num2));
+*/
+
+
+/*
+int value = 0;     // value is now 0.
+Console.WriteLine("value = " + value);
+value = value + 5; // value is now 5.
+Console.WriteLine("value = " + value);
+value += 5;        // value is now 10.
+Console.WriteLine("value = " + value);
+*/
+
+
+/*
+int value = 1;
+
+value = value + 1;
+Console.WriteLine("First increment: " + value);
+
+value += 1;
+Console.WriteLine("Second increment: " + value);
+
+value++;
+Console.WriteLine("Third increment: " + value);
+
+value = value - 1;
+Console.WriteLine("First decrement: " + value);
+
+value -= 1;
+Console.WriteLine("Second decrement: " + value);
+
+value--;
+Console.WriteLine("Third decrement: " + value);
+*/
+
+
+/*
+int value = 1;
+value++;
+Console.WriteLine("First: " + value);
+Console.WriteLine($"Second: {value++}");
+Console.WriteLine("Third: " + value);
+Console.WriteLine("Fourth: " + (++value));
+*/
+
+//Desafío: Cálculo de los grados Celsius según la temperatura actual en grados Fahrenheit
+//Para convertir temperaturas de grados Fahrenheit a Celsius, primero reste 32 y luego multiplique por cinco novenos (5/9).
+
+
+int fahrenheit = 94;
+
+Console.Clear();
+Console.WriteLine("The temperature is " + (((decimal)fahrenheit - 32) * 5 / 9 ) + " Celsius.");
+Console.WriteLine("The temperature is " + (((decimal)fahrenheit - 32) * ((decimal)5 / 9)) + " Celsius.");
+Console.WriteLine("The temperature is " + ((fahrenheit - 32) * ((decimal)5 / 9)) + " Celsius.");
+
+var celsius = (fahrenheit - 32) * (5 / 9m);
+Console.WriteLine("The temperature is " + celsius + " Celsius.");
+Console.WriteLine("The temperature is " + Math.Round(celsius, 1) + " Celsius.");
+Console.WriteLine("The temperature is " + celsius.ToString("##.#") + " Celsius.");
+Console.WriteLine("The temperature is " + decimal.Round(celsius, 1) + " Celsius.");
