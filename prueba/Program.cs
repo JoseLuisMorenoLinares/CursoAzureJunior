@@ -223,6 +223,8 @@ Console.WriteLine("The temperature is " + celsius.ToString("##.#") + " Celsius."
 Console.WriteLine("The temperature is " + decimal.Round(celsius, 1) + " Celsius.");
 */
 
+
+/*
 // initialize variables - graded assignments 
 int currentAssignments = 5;
 
@@ -262,5 +264,69 @@ Console.WriteLine("Sophia\t" + Math.Round(mediaSophia, 1) + "\t" + (mediaSophia 
 Console.WriteLine("Nicolas\t" + Math.Round(mediaNicolas, 1) + "\t" + (mediaNicolas >= 90 ? "A" : "B"));
 Console.WriteLine("Zahirah\t" + Math.Round(mediaZahirah, 1) + "\t" + (mediaZahirah >= 90 ? "A" : "B"));
 Console.WriteLine("Jeong\t" + Math.Round(mediaJeong, 1) + "\t" + (mediaJeong >= 90 ? "A" : "B"));
+*/
+/*
+Console.Clear();
+
+string studentName = "Sophia Johnson";
+
+string[] courseName = {"English 101", "Algebra 101", "Biology 101", "Computer Science I", "Psychology 101"};
+int[] courseCredit = {3, 3, 4, 4, 3};
+int[] courseGrade = {4, 3, 3, 3, 4};
+
+int sumaGeneral = 0, sumaCredit = 0;
+
+for (int i = 0 ; i < courseGrade.Length ; i++)
+{
+    sumaGeneral += courseCredit[i] * courseGrade[i];
+    sumaCredit += courseGrade[i];
+}
+
+Console.WriteLine("sumaGeneral: " + sumaGeneral + " - sumaCredit: " + sumaCredit + " - resultado = " + (decimal)sumaGeneral/sumaCredit);
+//Console.WriteLine("Student: " + studentName
+*/
+/*
+Student: Sophia Johnson
+
+Course          Grade   Credit Hours	
+English 101         4       3
+Algebra 101         3       3
+Biology 101         3       4
+Computer Science I  3       4
+Psychology 101      4       3
+
+Final GPA:          3.35
+*/
 
 
+/*
+Console.Clear();
+Random dice = new Random();
+for(int i = 1 ; i < 100 ; i++)
+{
+    int roll = dice.Next(1, 7);
+    Console.WriteLine(roll);
+}
+*/
+
+
+/*
+//Random dice = new Random();
+Console.Clear();
+for(int i = 1 ; i < 100 ; i++)
+{
+    Console.WriteLine(new Random().Next(1, 7));
+}
+*/
+
+
+//Desafío de código: implemente un método de la clase Math que devuelva el mayor de dos números.
+
+int firstValue = 500;
+int secondValue = 600;
+int largerValue;
+
+largerValue = Math.Max(firstValue, secondValue);
+
+
+Console.WriteLine(largerValue);
