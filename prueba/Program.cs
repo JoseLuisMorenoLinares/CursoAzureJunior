@@ -320,6 +320,7 @@ for(int i = 1 ; i < 100 ; i++)
 */
 
 
+/*
 //Desafío de código: implemente un método de la clase Math que devuelva el mayor de dos números.
 
 int firstValue = 500;
@@ -330,3 +331,62 @@ largerValue = Math.Max(firstValue, secondValue);
 
 
 Console.WriteLine(largerValue);
+*/
+
+
+/*
+Random dice = new Random();
+
+int roll1 = dice.Next(1, 7);
+int roll2 = dice.Next(1, 7);
+int roll3 = dice.Next(1, 7);
+
+int total = roll1 + roll2 + roll3;
+Console.Clear();
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+*/
+
+int total = 0;
+int[] tirada = new int[3];
+Console.Clear();
+Console.Write("Dice roll: ");
+
+for(int i = 0 ; i < 3 ; i++)
+{
+    tirada[i] =  new Random().Next(1,7);
+    total += tirada[i];
+
+//    Opcion 1
+//    if(i < 2)
+//    {
+//        Console.Write(" + ");
+//    }
+
+//    Opcion 2
+    Console.Write($"{tirada[i]}" + (i < 2 ? " + " : "\n"));
+}
+
+
+if(tirada[0] == tirada[1] || tirada[0] == tirada[2] || tirada[1] == tirada[2])
+{
+    Console.WriteLine("You rolled doubles! +2 bonus to total!");
+    total += 2;
+}
+
+if ((tirada[0] == tirada[1]) && (tirada[1] == tirada[2])) 
+{
+    Console.WriteLine("You rolled triples! +6 bonus to total!");
+    total += 6;
+}
+
+Console.Write($"TOTAL = {total}\n");
+
+if (total > 9)
+{
+    Console.WriteLine("You win!");
+}
+
+if (total < 10)
+{
+    Console.WriteLine("Sorry, you lose.");
+}
