@@ -395,7 +395,7 @@ if (total < 10)
 */
 
 
-
+/*
 //Desafío: Mejora de la tasa de renovación de las suscripciones
 Random random = new Random();
 //int daysUntilExpiration = random.Next(12);
@@ -436,5 +436,19 @@ while(continuar)
         continuar = false;
     }
 }
+*/
+
+//Desafío de código: Notificar los identificadores de pedido que necesitan una investigación más detallada
+Console.Clear();
+string[] codigos = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
+
+foreach(string codigo in codigos)
+{
+    if (codigo.StartsWith("B"))
+    {
+        Console.WriteLine(codigo);
+    }
+}
+
 
 
