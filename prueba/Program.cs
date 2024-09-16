@@ -346,6 +346,8 @@ Console.Clear();
 Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
 */
 
+
+/*
 int total = 0;
 int[] tirada = new int[3];
 Console.Clear();
@@ -390,3 +392,6 @@ if (total < 10)
 {
     Console.WriteLine("Sorry, you lose.");
 }
+*/
+
+
