@@ -395,3 +395,46 @@ if (total < 10)
 */
 
 
+
+//Desafío: Mejora de la tasa de renovación de las suscripciones
+Random random = new Random();
+//int daysUntilExpiration = random.Next(12);
+int daysUntilExpiration;
+int discountPercentage = 0;
+
+// Your code goes here
+
+//for(int i = 0 ; i <= 100 ; )
+
+bool continuar = true;
+while(continuar)
+{
+    daysUntilExpiration = random.Next(12);
+    Console.Clear();
+    Console.WriteLine("daysUntilExpiration = " + daysUntilExpiration);
+
+    if (daysUntilExpiration == 0)
+    {
+        Console.WriteLine("Your subscription has expired.");
+    }else if (daysUntilExpiration == 1)
+    {
+        discountPercentage = 20;
+        Console.WriteLine($"Your subscription expires within a day!\nRenew now and save {discountPercentage}%!");
+    }else if (daysUntilExpiration <= 5)
+    {
+        discountPercentage = 10;
+        Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.\nRenew now and save {discountPercentage}%!");
+    }else if (daysUntilExpiration <= 10)
+    {
+        Console.WriteLine("Your subscription will expire soon. Renew now!");
+    }
+
+    Console.WriteLine("Pulse una tecla para volver a evaluar");
+    var tecla = Console.ReadKey();
+    if (tecla.KeyChar == 'x')
+    {
+        continuar = false;
+    }
+}
+
+
