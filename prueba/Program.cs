@@ -745,6 +745,7 @@ Console.WriteLine("Discount: " + (saleAmount > 1000 ? 100 : 50));
 */
 
 
+/*
 //Desafío de código: escribir código para mostrar el resultado de un cara o cruz
 Random moneda = new Random();
 int flip = moneda.Next(0, 2);
@@ -752,5 +753,13 @@ int flip = moneda.Next(0, 2);
 Console.WriteLine("Resultado: " + (flip == 0 ? "Cara" : "Cruz"));
 
 Console.WriteLine("Resultado: " + (new Random().Next(0, 2) == 0 ? "Cara" : "Cruz"));
+*/
+
+string permission = "Manager"; //Admin|Manager
+int level = 5;
+
+//Console.WriteLine(permission.Contains("Admin") ? level > 55 ? "Welcome, Super Admin user." : "Welcome, Admin user." : level > 20 ? "Contact an Admin for access." : "You do not have sufficient privileges.");
+
+Console.WriteLine(permission.Contains("Admin") ? level > 55 ? "Welcome, Super Admin user." : "Welcome, Admin user." : permission.Contains("Manager") ? level > 20 ? "Contact an Admin for access." : "You do not have sufficient privileges." : "You do not have sufficient privileges.");
 
 
