@@ -438,6 +438,8 @@ while(continuar)
 }
 */
 
+
+/*
 //Desafío de código: Notificar los identificadores de pedido que necesitan una investigación más detallada
 Console.Clear();
 string[] codigos = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
@@ -449,6 +451,154 @@ foreach(string codigo in codigos)
         Console.WriteLine(codigo);
     }
 }
+*/
 
 
+/*
+// initialize variables - graded assignments 
+int currentAssignments = 5;
 
+int sophia1 = 90;
+int sophia2 = 86;
+int sophia3 = 87;
+int sophia4 = 98;
+int sophia5 = 100;
+
+int andrew1 = 92;
+int andrew2 = 89;
+int andrew3 = 81;
+int andrew4 = 96;
+int andrew5 = 90;
+
+int emma1 = 90;
+int emma2 = 85;
+int emma3 = 87;
+int emma4 = 98;
+int emma5 = 68;
+
+int logan1 = 90;
+int logan2 = 95;
+int logan3 = 87;
+int logan4 = 88;
+int logan5 = 96;
+
+int sophiaSum = 0;
+int andrewSum = 0;
+int emmaSum = 0;
+int loganSum = 0;
+
+decimal sophiaScore;
+decimal andrewScore;
+decimal emmaScore;
+decimal loganScore;
+
+sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
+andrewSum = andrew1 + andrew2 + andrew3 + andrew4 + andrew5;
+emmaSum = emma1 + emma2 + emma3 + emma4 + emma5;
+loganSum = logan1 + logan2 + logan3 + logan4 + logan5;
+
+sophiaScore = (decimal)sophiaSum / currentAssignments;
+andrewScore = (decimal)andrewSum / currentAssignments;
+emmaScore = (decimal)emmaSum / currentAssignments;
+loganScore = (decimal)loganSum / currentAssignments;
+
+Console.WriteLine("Student\t\tGrade\n");
+Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
+Console.WriteLine("Andrew:\t\t" + andrewScore + "\tB+");
+Console.WriteLine("Emma:\t\t" + emmaScore + "\tB");
+Console.WriteLine("Logan:\t\t" + loganScore + "\tA-");
+
+Console.WriteLine("Press the Enter key to continue");
+Console.ReadLine();
+*/
+
+
+// Opcion con arrays
+string[] alumnos = {"Sophia", "Andrew", "Emma", "Logan", "Pepe", "Juan"};
+int[][] notas = new int[][]
+{
+    new int[] {90, 86, 87, 98, 100},
+    new int[] {92, 89, 81, 96, 90},
+    new int[] {90, 85, 87, 98, 68},
+    new int[] {90, 95, 87, 88, 96},
+    new int[] {90, 95, 87, 88, 96},
+    new int[] {92, 89, 81, 96, 90}
+};
+
+int indiceDeAlumno = 0;
+decimal sumaDeNotas = 0;
+
+Console.Clear();
+
+if (alumnos.Length != notas.Length)
+{
+    Console.WriteLine("El numero de alumnos no coincide con el numero de notas");
+}
+else
+{
+
+    foreach(string alumno in alumnos)
+    {
+        sumaDeNotas = 0;
+
+    // Opcion recorriendo array de notas
+    //    foreach(int nota in notas[indiceDeAlumno])
+    //    {
+    //        sumaDeNotas += nota;
+    //    }
+
+    // Opcion sin recorrer array de las notas
+        sumaDeNotas =+ notas[indiceDeAlumno].Sum();
+
+        var media = sumaDeNotas / (notas[0].Length);
+        indiceDeAlumno++;
+        string notaEnLetra;
+
+        if (media <= 59)
+        {
+            notaEnLetra = "F";
+        } else if (media <= 62)
+        {
+            notaEnLetra = "D-";
+        } else if (media <= 66)
+        {
+            notaEnLetra = "D";
+        } else if (media <= 69)
+        {
+            notaEnLetra = "D+";
+        } else if (media <= 72)
+        {
+            notaEnLetra = "C-";
+        } else if (media <= 76)
+        {
+            notaEnLetra = "C";
+        } else if (media <= 79)
+        {
+            notaEnLetra = "C+";
+        } else if (media <= 82)
+        {
+            notaEnLetra = "B-";
+        } else if (media <= 86)
+        {
+            notaEnLetra = "B";
+        } else if (media <= 89)
+        {
+            notaEnLetra = "B+";
+        } else if (media <= 92)
+        {
+            notaEnLetra = "A-";   
+        } else if (media <= 96)
+        {
+            notaEnLetra = "A";
+        } else if (media <= 100)
+        {
+            notaEnLetra = "A+";
+        }
+        else
+        {
+            notaEnLetra = "Fuera de rango";
+        }
+
+        Console.WriteLine($"Nombre: {alumno}\t Nota: {media}\t{notaEnLetra}");
+    }
+}
