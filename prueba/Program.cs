@@ -745,3 +745,12 @@ Console.WriteLine("Discount: " + (saleAmount > 1000 ? 100 : 50));
 */
 
 
+//Desafío de código: escribir código para mostrar el resultado de un cara o cruz
+Random moneda = new Random();
+int flip = moneda.Next(0, 2);
+
+Console.WriteLine("Resultado: " + (flip == 0 ? "Cara" : "Cruz"));
+
+Console.WriteLine("Resultado: " + (new Random().Next(0, 2) == 0 ? "Cara" : "Cruz"));
+
+
