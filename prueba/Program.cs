@@ -755,11 +755,132 @@ Console.WriteLine("Resultado: " + (flip == 0 ? "Cara" : "Cruz"));
 Console.WriteLine("Resultado: " + (new Random().Next(0, 2) == 0 ? "Cara" : "Cruz"));
 */
 
+/*
 string permission = "Manager"; //Admin|Manager
 int level = 5;
 
 //Console.WriteLine(permission.Contains("Admin") ? level > 55 ? "Welcome, Super Admin user." : "Welcome, Admin user." : level > 20 ? "Contact an Admin for access." : "You do not have sufficient privileges.");
 
 Console.WriteLine(permission.Contains("Admin") ? level > 55 ? "Welcome, Super Admin user." : "Welcome, Admin user." : permission.Contains("Manager") ? level > 20 ? "Contact an Admin for access." : "You do not have sufficient privileges." : "You do not have sufficient privileges.");
+*/
 
 
+/*
+Console.Clear();
+
+for(int i = 0 ; i <= 100 ; i++)
+{
+    Console.Write(i);
+
+    if(i % 3 == 0 && i % 5 == 0) Console.WriteLine(" - FizzBuzz");
+    else if(i % 3 == 0) Console.WriteLine(" - Fizz");
+    else if(i % 3 == 0 && i % 5 == 0) Console.WriteLine(" - Buzz");
+    else Console.WriteLine();
+
+//    if(i % 3 == 0)
+//    {
+//        if(i % 5 == 0)
+//        {
+//            Console.WriteLine(" - FizzBuzz");
+//        }
+//        else
+//        {
+//            Console.WriteLine(" - Fizz");
+//        }
+//    }
+//    else
+//    {
+//        if(i % 5 == 0)
+//        {
+//            Console.WriteLine(" - Buzz");
+//        }
+//        else
+//        {
+//            Console.WriteLine();
+//        }
+//    }
+
+}
+*/
+
+/*
+Random random = new Random();
+int current = 0;
+
+do
+{
+    current = random.Next(1, 11);
+    Console.WriteLine(current);
+} while (current != 7);
+*/
+
+int saludHeroe = 10;
+int saludMontruo = 10;
+int ataque;
+Random dados = new Random();
+bool IsHeroe = true; // solo para opcion 3
+
+Console.Clear();
+do
+{
+
+// OPCION 1    
+//    Console.WriteLine("Salud Heroe = " + saludHeroe);
+//    Console.WriteLine("Salud Monstruo = " + saludMontruo);
+
+//    ataque = dados.Next(1, 11);
+//    Console.WriteLine("Pulse para ataque del Heroe");
+//    Console.ReadKey();
+//    saludMontruo -= ataque;
+//    if(saludMontruo <= 0) continue;
+
+//    ataque = dados.Next(1, 11);
+//    Console.WriteLine("Pulse para ataque del Monstruo");
+//    Console.ReadKey();
+//    saludHeroe -= ataque;
+//    if(saludHeroe <= 0) continue;
+
+//    Console.WriteLine("Siguiente ronda\n");
+
+// OPCION 2    
+//    Console.WriteLine("Press for Hero attack");
+//    Console.ReadKey();
+//    ataque = dados.Next(1, 11);
+//    saludMontruo -= ataque;
+//    Console.WriteLine($"Monster was damaged and lost {ataque} health and now has {saludMontruo} health.");
+//    if(saludMontruo <= 0) continue;
+
+//    Console.WriteLine("Press for Monster attack");
+//    Console.ReadKey();
+//    ataque = dados.Next(1, 11);
+//    saludHeroe -= ataque;
+//    Console.WriteLine($"Hero was damaged and lost {ataque} health and now has {saludHeroe} health.");
+//    if(saludHeroe <= 0) continue;
+
+//    Console.WriteLine("Next Round\n");
+
+    Console.ReadKey();
+    ataque = dados.Next(1, 11);
+    if (IsHeroe)
+    {
+        saludMontruo -= ataque;
+        Console.WriteLine($"Monster was damaged and lost {ataque} health and now has {saludMontruo} health.");
+    }
+    else
+    {
+        saludHeroe -= ataque;
+        Console.WriteLine($"Hero was damaged and lost {ataque} health and now has {saludHeroe} health.");
+    }
+
+    IsHeroe = !IsHeroe;
+// OPCION 3
+
+}while(saludHeroe > 0 && saludMontruo > 0);
+
+/*
+Console.WriteLine("\nFin Partida");
+Console.WriteLine("Salud Heroe = " + saludHeroe);
+Console.WriteLine("Salud Montruo = " + saludMontruo);
+Console.WriteLine("GANA " + (saludHeroe > saludMontruo ? "HEROE" : "MONSTRUO"));
+*/
+Console.WriteLine("\n" + (saludHeroe > saludMontruo ? "HERO" : "MONSTER") + " WINS!");
