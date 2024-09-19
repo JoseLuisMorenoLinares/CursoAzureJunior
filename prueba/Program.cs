@@ -814,6 +814,8 @@ do
 } while (current != 7);
 */
 
+
+/*
 int saludHeroe = 10;
 int saludMontruo = 10;
 int ataque;
@@ -877,10 +879,57 @@ do
 
 }while(saludHeroe > 0 && saludMontruo > 0);
 
-/*
-Console.WriteLine("\nFin Partida");
-Console.WriteLine("Salud Heroe = " + saludHeroe);
-Console.WriteLine("Salud Montruo = " + saludMontruo);
-Console.WriteLine("GANA " + (saludHeroe > saludMontruo ? "HEROE" : "MONSTRUO"));
-*/
+
+//Console.WriteLine("\nFin Partida");
+//Console.WriteLine("Salud Heroe = " + saludHeroe);
+//Console.WriteLine("Salud Montruo = " + saludMontruo);
+//Console.WriteLine("GANA " + (saludHeroe > saludMontruo ? "HEROE" : "MONSTRUO"));
+
 Console.WriteLine("\n" + (saludHeroe > saludMontruo ? "HERO" : "MONSTER") + " WINS!");
+*/
+
+
+/*
+Console.WriteLine("Signed integral types:");
+
+Console.WriteLine($"sbyte  : {sbyte.MinValue} to {sbyte.MaxValue}");
+Console.WriteLine($"short  : {short.MinValue} to {short.MaxValue}");
+Console.WriteLine($"int    : {int.MinValue} to {int.MaxValue}");
+Console.WriteLine($"long   : {long.MinValue} to {long.MaxValue}");
+
+Console.WriteLine("");
+Console.WriteLine("Floating point types:");
+Console.WriteLine($"float  : {float.MinValue} to {float.MaxValue} (with ~6-9 digits of precision)");
+Console.WriteLine($"double : {double.MinValue} to {double.MaxValue} (with ~15-17 digits of precision)");
+Console.WriteLine($"decimal: {decimal.MinValue} to {decimal.MaxValue} (with 28-29 digits of precision)");
+*/
+
+
+/*
+string value1 = "5";
+string value2 = "7";
+int result = Convert.ToInt32(value1) * Convert.ToInt32(value2);
+Console.WriteLine(result);
+*/
+
+string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+double suma = 0;
+string mensaje = string.Empty;
+
+Console.Clear();
+
+for(int i = 0 ; i < values.Length ; i++)
+{
+    //double valor;
+    if (double.TryParse(values[i], out double valor))
+    {
+        suma += valor;
+    }
+    else
+    {
+        mensaje += values[i];
+    }
+}
+
+Console.WriteLine($"Message: {mensaje}");
+Console.WriteLine($"Total: {suma}");
