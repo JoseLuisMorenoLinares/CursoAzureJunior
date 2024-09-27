@@ -912,6 +912,7 @@ int result = Convert.ToInt32(value1) * Convert.ToInt32(value2);
 Console.WriteLine(result);
 */
 
+/*
 string[] values = { "12.3", "45", "ABC", "11", "DEF" };
 double suma = 0;
 string mensaje = string.Empty;
@@ -933,3 +934,4 @@ for(int i = 0 ; i < values.Length ; i++)
 
 Console.WriteLine($"Message: {mensaje}");
 Console.WriteLine($"Total: {suma}");
+*/
