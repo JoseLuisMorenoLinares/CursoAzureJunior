@@ -959,4 +959,88 @@ Console.WriteLine(fecha.AddMonths(1));
 Console.WriteLine(fecha.AddMonths(1).Ticks);
 */
 
-// mas codigo
+
+/*
+using System.Runtime.CompilerServices;
+
+string[,] corporate = 
+{
+    {"Robert", "Bavin"}, {"Simon", "Bright"},
+    {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
+    {"Sarah", "Delucchi"}, {"Sinan", "Ali"}
+};
+
+string[,] external = 
+{
+    {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
+    {"Shay", "Lawrence"}, {"Daren", "Valdes"}
+};
+
+string externalDomain = "hayworth.com";
+
+for (int i = 0; i < corporate.GetLength(0); i++) 
+{
+    Console.WriteLine($"{RetornaDireccion(corporate[i, 0], corporate[i, 1])}");
+}
+
+for (int i = 0; i < external.GetLength(0); i++) 
+{
+    // display external email addresses
+    Console.WriteLine($"{RetornaDireccion(external[i, 0], external[i, 1], externalDomain)}");
+}
+
+ string RetornaDireccion(string nombre, string apellido, string domain = "contoso.com")
+{
+    return (nombre.Substring(0, 2) + apellido).ToLower() + "@" + domain;
+}
+*/
+
+
+/*
+// Desafío de código: adición de métodos para que el juego sea jugable
+Random random = new Random();
+
+Console.WriteLine("Would you like to play? (Y/N)");
+if (ShouldPlay()) 
+{
+    Console.Clear();
+    PlayGame();
+}
+
+void PlayGame() 
+{
+    var play = true;
+
+    while (play) 
+    {
+        var target = random.Next(1, 5);
+        var roll = random.Next(1, 6);
+
+        Console.WriteLine($"Roll a number greater than {target} to win!");
+        Console.WriteLine($"You rolled a {roll}");
+        Console.WriteLine(WinOrLose(target, roll));
+        Console.WriteLine("\nPlay again? (Y/N)");
+
+        play = ShouldPlay();
+    }
+}
+
+bool ShouldPlay()
+{
+    
+//    string tecla = Console.ReadLine().ToString();
+    
+//    return tecla.ToUpper().Equals("Y") ? true : false;
+    
+    int tecla = Console.ReadKey().KeyChar;
+
+    return (tecla == 89 || tecla == 121);
+}
+
+string WinOrLose(int t, int r)
+{
+    return r > t ? "You win!" : "You lose!";
+}
+*/
+
+
