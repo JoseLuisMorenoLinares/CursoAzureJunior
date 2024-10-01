@@ -935,3 +935,28 @@ for(int i = 0 ; i < values.Length ; i++)
 Console.WriteLine($"Message: {mensaje}");
 Console.WriteLine($"Total: {suma}");
 */
+
+
+/*
+// FECHAS
+Console.Clear();
+
+Console.WriteLine(DateTime.Now);
+Console.WriteLine(DateTime.Now.ToLongDateString());
+Console.WriteLine(DateTime.UtcNow.ToLongDateString());
+Console.WriteLine(DateTime.Now.ToShortDateString());
+Console.WriteLine(DateTime.UtcNow.ToShortDateString());
+Console.WriteLine(DateTime.Now.ToLongTimeString());
+Console.WriteLine(DateTime.UtcNow.ToLongTimeString());
+Console.WriteLine(DateTime.Now.ToShortTimeString());
+Console.WriteLine(DateTime.UtcNow.ToShortTimeString());
+Console.WriteLine(DateTime.Now.ToString("dd-MM-yy HH:mm:ss.fff"));
+
+Console.WriteLine();
+
+var fecha = new DateTime(2024, 05,31);
+Console.WriteLine(fecha.AddMonths(1));
+Console.WriteLine(fecha.AddMonths(1).Ticks);
+*/
+
+// mas codigo
