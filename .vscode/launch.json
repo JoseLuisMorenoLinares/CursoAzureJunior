@@ -9,7 +9,7 @@
           "type": "coreclr",
           "request": "launch",
           "preLaunchTask": "build",
-          "program": "${workspaceFolder}\\HolaMundo\\bin\\Debug\\net8.0\\HolaMundo.dll",
+          "program": "${workspaceFolder}\\prueba\\bin\\Debug\\net8.0\\prueba.dll",
           "args": [],
           "cwd": "${workspaceFolder}",
           "stopAtEntry": false,
