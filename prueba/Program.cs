@@ -1044,6 +1044,7 @@ string WinOrLose(int t, int r)
 */
 
 
+/*
 // DESAFIO Creacion de un minijuego
 //using System;
 
@@ -1074,12 +1075,12 @@ int food = 0;
 InitializeGame();
 while (!shouldExit && !TerminalResized()) 
 {
-/*    if (TerminalResized())
-    {
-        height = Console.WindowHeight - 1;
-        width = Console.WindowWidth - 5;
-        shouldExit = true;
-    }*/
+//    if (TerminalResized())
+//    {
+//        height = Console.WindowHeight - 1;
+//        width = Console.WindowWidth - 5;
+//        shouldExit = true;
+//    }
     Move();
     if (playerX == foodX && playerY == foodY)
     {
@@ -1174,3 +1175,15 @@ void InitializeGame()
     Console.SetCursorPosition(0, 0);
     Console.Write(player);
 }
+*/
+
+
+/*
+string[] students = new string[] {"Sophia", "Nicolas", "Zahirah", "Jeong"};
+
+int studentCount = students.Length;
+
+Console.WriteLine("The final name is: " + students[studentCount]);
+*/
+
+
