@@ -64,7 +64,7 @@ public class CalculadoraTest
         int resultadoEsperado = 2;
 
         //Act
-        int resultado = calculadora.Resta(numero1, numero2);
+        int? resultado = calculadora.Resta(numero1, numero2);
 
         //Assert
         Assert.AreEqual(resultadoEsperado, resultado);
@@ -80,7 +80,7 @@ public class CalculadoraTest
         int resultadoEsperado = 1;
 
         //Act
-        int resultado = calculadora.Resta(numero1, numero2);
+        int? resultado = calculadora.Resta(numero1, numero2);
 
         //Assert
         Assert.AreEqual(resultadoEsperado, resultado);
@@ -180,7 +180,7 @@ public class CalculadoraTest
         //Act
         int suma = calculadora.Suma(sumando1, sumando2);
         int? division = calculadora.Divide(dividendo, divisor);
-        var resultado = suma - division;
+        int? resultado = calculadora.Resta(suma, division);
 
         //Assert
         Assert.AreEqual(resultadoEsperado, resultado);
