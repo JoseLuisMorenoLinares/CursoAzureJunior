@@ -1,4 +1,4 @@
-﻿// Mi primer Pull request
+// Mi primer Pull request
 // See https://aka.ms/new-console-template for more information
 
 
@@ -60,7 +60,7 @@ double numeroGrande = numero;
 */
 
 /*
-//Desafío: Mostrar valores literales y variables
+//Desaf�o: Mostrar valores literales y variables
 string nombre = "Bob";
 int numeroMensajes = 3;
 double temperatura = 34.4;
@@ -111,7 +111,7 @@ Console.WriteLine(path);
 
 
 /*
-//Desafío: aplicación de formato y visualización de las instrucciones
+//Desaf�o: aplicaci�n de formato y visualizaci�n de las instrucciones
 
 string projectName = "ACME";
 string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
@@ -206,7 +206,7 @@ Console.WriteLine("Third: " + value);
 Console.WriteLine("Fourth: " + (++value));
 */
 
-//Desafío: Cálculo de los grados Celsius según la temperatura actual en grados Fahrenheit
+//Desaf�o: C�lculo de los grados Celsius seg�n la temperatura actual en grados Fahrenheit
 //Para convertir temperaturas de grados Fahrenheit a Celsius, primero reste 32 y luego multiplique por cinco novenos (5/9).
 
 /*
@@ -322,7 +322,7 @@ for(int i = 1 ; i < 100 ; i++)
 
 
 /*
-//Desafío de código: implemente un método de la clase Math que devuelva el mayor de dos números.
+//Desaf�o de c�digo: implemente un m�todo de la clase Math que devuelva el mayor de dos n�meros.
 
 int firstValue = 500;
 int secondValue = 600;
@@ -397,7 +397,7 @@ if (total < 10)
 
 
 /*
-//Desafío: Mejora de la tasa de renovación de las suscripciones
+//Desaf�o: Mejora de la tasa de renovaci�n de las suscripciones
 Random random = new Random();
 //int daysUntilExpiration = random.Next(12);
 int daysUntilExpiration;
@@ -441,7 +441,7 @@ while(continuar)
 
 
 /*
-//Desafío de código: Notificar los identificadores de pedido que necesitan una investigación más detallada
+//Desaf�o de c�digo: Notificar los identificadores de pedido que necesitan una investigaci�n m�s detallada
 Console.Clear();
 string[] codigos = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
 
@@ -747,7 +747,7 @@ Console.WriteLine("Discount: " + (saleAmount > 1000 ? 100 : 50));
 
 
 /*
-//Desafío de código: escribir código para mostrar el resultado de un cara o cruz
+//Desaf�o de c�digo: escribir c�digo para mostrar el resultado de un cara o cruz
 Random moneda = new Random();
 int flip = moneda.Next(0, 2);
 
@@ -1023,7 +1023,7 @@ for (int i = 0; i < external.GetLength(0); i++)
 
 
 /*
-// Desafío de código: adición de métodos para que el juego sea jugable
+// Desaf�o de c�digo: adici�n de m�todos para que el juego sea jugable
 Random random = new Random();
 
 Console.WriteLine("Would you like to play? (Y/N)");
@@ -1069,5 +1069,287 @@ string WinOrLose(int t, int r)
 }
 */
 
-
+/*
 Console.WriteLine("Hola");
+
+*/
+
+/*
+string first = "Hello";
+string second = "World";
+string result = string.Format("{0} {1}!", first, second);
+Console.WriteLine(result);
+*/
+
+/*
+string first = "Hello";
+string second = "World";
+Console.WriteLine("{1} {0}!", first, second);
+Console.WriteLine("{0} {0} {0}!", first, second);
+*/
+
+/*
+string first = "Hello";
+string second = "World";
+Console.WriteLine($"{first} {second}!");
+Console.WriteLine($"{second} {first}!");
+Console.WriteLine($"{first} {first} {first}!");
+*/
+
+/*
+decimal price = 123.45m;
+int discount = 50;
+Console.WriteLine($"Price: {price:C} (Save {discount:C})");
+*/
+
+/*
+decimal measurement = 123456.78912m;
+Console.WriteLine($"Measurement: {measurement:N} units");
+*/
+
+/*
+decimal measurement = 123456.78912m;
+Console.WriteLine($"Measurement: {measurement:N4} units");
+*/
+
+/*
+decimal tax = .36785m;
+Console.WriteLine($"Tax rate: {tax:P2}");
+*/
+
+/*
+decimal price = 67.55m;
+decimal salePrice = 59.99m;
+
+string yourDiscount = String.Format("You saved {0:C2} off the regular {1:C2} price. ", (price - salePrice), price);
+
+Console.WriteLine(yourDiscount);
+*/
+
+/*
+decimal price = 67.55m;
+decimal salePrice = 59.99m;
+
+string yourDiscount = String.Format("You saved {0:C2} off the regular {1:C2} price. ", (price - salePrice), price);
+
+yourDiscount += $"A discount of {((price - salePrice)/price):P2}!"; //inserted
+Console.WriteLine(yourDiscount);
+*/
+
+/*
+int invoiceNumber = 1201;
+decimal productShares = 25.4568m;
+decimal subtotal = 2750.00m;
+decimal taxPercentage = .15825m;
+decimal total = 3185.19m;
+
+Console.WriteLine($"Invoice Number: {invoiceNumber}");
+Console.WriteLine($"   Shares: {productShares:N3} Product");
+Console.WriteLine($"     Sub Total: {subtotal:C}");
+Console.WriteLine($"           Tax: {taxPercentage:P2}");
+Console.WriteLine($"     Total Billed: {total:C}");
+*/
+
+/*
+string input = "Pad this";
+Console.WriteLine(input.PadLeft(12));
+Console.WriteLine(input.PadRight(12));
+
+Console.WriteLine(input.PadLeft(12, '-'));
+Console.WriteLine(input.PadRight(12, '-'));
+*/
+
+/*
+string paymentId = "769C";
+
+var formattedLine = paymentId.PadRight(6);
+
+Console.WriteLine(formattedLine);
+*/
+
+/*
+string paymentId = "769C";
+string payeeName = "Mr. Stephen Ortega";
+
+var formattedLine = paymentId.PadRight(6);
+formattedLine += payeeName.PadRight(24);
+
+Console.WriteLine(formattedLine);
+*/
+
+/*
+string paymentId = "769C";
+string payeeName = "Mr. Stephen Ortega";
+string paymentAmount = "$5,000.00";
+
+var formattedLine = paymentId.PadRight(6);
+formattedLine += payeeName.PadRight(24);
+formattedLine += paymentAmount.PadLeft(10);
+
+Console.WriteLine("1234567890123456789012345678901234567890");
+Console.WriteLine(formattedLine);
+*/
+
+/*
+using System;
+using System.Globalization;
+string customerName = "Ms. Barros";
+
+string currentProduct = "Magic Yield";
+int currentShares = 2975000;
+decimal currentReturn = 0.1275m;
+decimal currentProfit = 55000000.0m;
+
+string newProduct = "Glorious Future";
+decimal newReturn = 0.13125m;
+decimal newProfit = 63000000.0m;
+
+// Your logic here
+CultureInfo euroCulture = new CultureInfo("es-ES"); // Establece la cultura espa?ola (o cualquier cultura que use el s�mbolo �)
+Console.WriteLine("Dear {0},", customerName);
+Console.WriteLine("As a customer of our {0} offering we are excited to tell you about a new financial product that would dramatically increase your return.", currentProduct);
+Console.WriteLine("\n");
+Console.WriteLine("Currently, you own {0:N2} shares at a return of {1:P2}.", currentShares, currentReturn);
+Console.WriteLine("\n");
+Console.WriteLine("Our new product, {0} offers a return of {1:P2}.  Given your current volume, your potential profit would be {2:C}.", newProduct, newReturn, newProfit);
+Console.WriteLine("\n");
+Console.WriteLine("Here's a quick comparison:\n");
+
+string comparisonMessage = "";
+
+// Your logic here
+comparisonMessage+=currentProduct.PadRight(20);
+comparisonMessage+=String.Format($"{currentReturn:P2}").PadRight(9);
+comparisonMessage+=String.Format($"{currentProfit:C}").PadRight(9);
+
+comparisonMessage+="\n";
+comparisonMessage+=newProduct.PadRight(20);
+comparisonMessage+=String.Format($"{newReturn:P2}").PadRight(9);
+comparisonMessage+=String.Format($"{newProfit:C}").PadRight(9);
+
+Console.WriteLine(comparisonMessage);
+*/
+
+/*
+Dear Ms. Barros,
+As a customer of our Magic Yield offering we are excited to tell you about a new financial product that would dramatically increase your return.
+
+Currently, you own 2,975,000.00 shares at a return of 12.75%.
+
+Our new product, Glorious Future offers a return of 13.13%.  Given your current volume, your potential profit would be $63,000,000.00.
+
+Here's a quick comparison:
+
+Magic Yield         12.75%   $55,000,000.00      
+Glorious Future     13.13%   $63,000,000.00
+*/
+
+/*
+using System;
+using System.Globalization;
+using System.Text;
+
+decimal newReturn = 0.13125m;
+decimal newProfit = 63000000.0m;
+string newProduct = "Glorious Future";
+
+Console.Clear();
+CultureInfo euroCulture = new CultureInfo("es-ES"); // Establece la cultura espa?ola (o cualquier cultura que use el s�mbolo �)
+Console.WriteLine("Our new product, {0} offers a return of {1:P2}.  Given your current volume, your potential profit would be {2:C2}.", 
+    newProduct, newReturn, newProfit.ToString("C2", euroCulture));
+*/
+
+/*
+using System.Globalization;
+using System.Text;
+
+CultureInfo euroCulture = new CultureInfo("es-ES");
+*/
+
+/*
+string cadena = "\u20AC";
+
+decimal newReturn = 0.13125m;
+decimal newProfit = 63000000.0m;
+string newProduct = "Glorious Future";
+cadena +=" €";
+Console.Clear();
+Console.OutputEncoding = System.Text.Encoding.ASCII;
+Console.WriteLine("ASCII");
+Console.WriteLine(cadena);
+Console.WriteLine("José");
+Console.WriteLine("Our new product, {0} offers a return of {1:P2}.  Given your current volume, your potential profit would be {2:C}.", newProduct, newReturn, newProfit);
+
+Console.OutputEncoding = System.Text.Encoding.Unicode;
+Console.WriteLine("\nUnicode");
+Console.WriteLine(cadena);
+Console.WriteLine("José");
+Console.WriteLine("Our new product, {0} offers a return of {1:P2}.  Given your current volume, your potential profit would be {2:C}.", newProduct, newReturn, newProfit);
+
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.WriteLine("\nUTF8");
+Console.WriteLine(cadena);
+Console.WriteLine("José");
+Console.WriteLine("Our new product, {0} offers a return of {1:P2}.  Given your current volume, your potential profit would be {2:C}.", newProduct, newReturn, newProfit);
+*/
+
+/*
+double total = 0;
+double minimumSpend = 30.00;
+
+double[] items = {15.97, 3.50, 12.25, 22.99, 10.98};
+double[] discounts = {0.30, 0.00, 0.10, 0.20, 0.50};
+
+for (int i = 0; i < items.Length; i++)
+{
+    total += GetDiscountedPrice(i);
+}
+
+//if (TotalMeetsMinimum())
+//{
+//    total -= 5.00;
+//}
+
+total -= TotalMeetsMinimum() ? 5.00 : 0.00;
+
+//Console.WriteLine($"Total: ${total}");
+Console.WriteLine($"Total: ${FormatDecimal(total)}");
+
+double GetDiscountedPrice(int itemIndex)
+{
+    // Calculate the discounted price of the item
+    //double result = items[itemIndex] * (1 - discounts[itemIndex]);
+    //return result;
+    return items[itemIndex] * (1 - discounts[itemIndex]);
+}
+
+bool TotalMeetsMinimum()
+{
+    // Check if the total meets the minimum
+    return total >= minimumSpend;
+}
+
+string FormatDecimal(double input)
+{
+    // Format the double so only 2 decimal places are displayed
+    return input.ToString().Substring(0, 5);
+}
+*/
+
+double usd = 23.73;
+int vnd = UsdToVnd(usd);
+
+Console.WriteLine($"${usd} USD = ${vnd} VND");
+Console.WriteLine($"${vnd} VND = ${VndToUsd(vnd)} USD");
+
+int UsdToVnd(double usd) 
+{
+    int rate = 23500;
+    return (int) (rate * usd);
+}
+
+double VndToUsd(int vnd) 
+{
+    double rate = 23500;
+    return vnd / rate;
+}
